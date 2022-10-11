@@ -1,0 +1,57 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+
+}
+.container {
+    width: 70%;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.box {
+    display: flex;
+    flex-direction: row;
+}
+.box .left {
+    width: calc(100% - 450x);
+    background-image: url("./bg-pattern-desktop.svg");
+    padding: 60px;
+}
+.box .right {
+    width: 450px;
+    height: 100%;
+    background-image: url("./hero-desktop.jpg");
+}
+.box .left .base-apparel {
+    margin-bottom: 20px;
+    margin-left: 0;
+}
+.box .left h1 {
+    color: #413839;
+    margin-bottom: 20px;
+}
+.box .left span {
+    color: #cd969b;
+}
+.box .left p {
+    color: #c89fa5;
+    margin-bottom: 20px;
+}
+.box .left .email {
+    border: 1px solid #dacbce;
+    border-radius: 15px;
+    background-color:#fefaf9 ;
+}
+.box .left .email::placeholder {
+    color: #decbcd;
+}
+.box .button {
+     
+}
