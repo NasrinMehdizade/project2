@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body {
-
+    /* background-color: #413839; */
 }
 .container {
     width: 70%;
@@ -20,18 +20,33 @@ body {
     flex-direction: row;
 }
 .box .left {
-    width: calc(100% - 450x);
+    width: calc(100% - 350x);
+    height: 100%;
     background-image: url("./bg-pattern-desktop.svg");
+    background-size: auto 100%;
     padding: 60px;
 }
 .box .right {
-    width: 450px;
+    display: flex;
+    flex-direction: column;
+}
+.box .right .image {
+    width: 350px;
     height: 100%;
     background-image: url("./hero-desktop.jpg");
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+}
+.box .right .base-apparel2 {
+    width: 20%;
+    display: none;
+    background-size: auto 100%;
 }
 .box .left .base-apparel {
-    margin-bottom: 20px;
-    margin-left: 0;
+    width: 25%;
+    margin-bottom: 13%;
+    margin-top: -10%;
+    display: block;
 }
 .box .left h1 {
     color: #413839;
@@ -44,14 +59,69 @@ body {
     color: #c89fa5;
     margin-bottom: 20px;
 }
-.box .left .email {
-    border: 1px solid #dacbce;
+.box .left .email-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid #d9c9cc ;
     border-radius: 15px;
-    background-color:#fefaf9 ;
+    background-color: #fefaf9;
+}
+.box .left .email {
+    border: 0;
+    border-radius: 15px;
+    background-color: #fefaf9;
 }
 .box .left .email::placeholder {
+    text-align: center;
     color: #decbcd;
 }
 .box .button {
-     
+     background: linear-gradient( 90deg , #f4bab9 , #f19290) ;
+     color: white;
+     font-size: 20px;
+     text-align: center;
+     padding: 5px 30px;
+     border: 0;
+     border-radius: 15px;
+
+}
+/* media */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+        height: auto;
+    }
+    .box {
+        height: auto;
+        flex-direction: column-reverse;
+        padding-top: 60PX;
+        padding-bottom: 60PX ;
+    }
+    .box .left {
+        width: 100%;
+    }
+    .box .right .image {
+        width: 100%;
+        height: 350px;
+        background-size: 100% auto;
+        
+    }
+    .box .left .base-apparel {
+        display: none;
+    }
+    .box .right .base-apparel2 {
+        width: 20%;
+        display: block;
+        padding-bottom: 20px;
+        background-size: 100% auto;
+        
+    }
+    .box .left h1 {
+        text-align: center;
+    }
+    .box .left p {
+        text-align: center;
+        margin-bottom: 58px;
+    }
 }
