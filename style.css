@@ -6,33 +6,26 @@
 body {
     /* background-color: #413839; */
 }
-.container {
-    width: 70%;
-    height: 100vh;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 .box {
+    width: 100%;
     display: flex;
     flex-direction: row;
 }
 .box .left {
-    width: calc(100% - 350x);
-    height: 100%;
+    width: 60%;
+    height: 100vh;
     background-image: url("./bg-pattern-desktop.svg");
-    background-size: auto 100%;
+    background-size: 100% auto ;
     padding: 60px;
+    padding-left: 95px;
 }
 .box .right {
+    width: 40%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 .box .right .image {
-    width: 350px;
-    height: 100%;
+    width: 100%;
     background-image: url("./hero-desktop.jpg");
     background-size: auto 100%;
     background-repeat: no-repeat;
@@ -44,22 +37,23 @@ body {
 }
 .box .left .base-apparel {
     width: 25%;
-    margin-bottom: 13%;
-    margin-top: -10%;
+    margin-bottom: 10%;
+    margin-top: -5%;
     display: block;
 }
 .box .left h1 {
     color: #413839;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 .box .left span {
     color: #cd969b;
 }
 .box .left p {
     color: #c89fa5;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
 }
 .box .left .email-box {
+    width: 70%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -68,6 +62,7 @@ body {
     background-color: #fefaf9;
 }
 .box .left .email {
+    width: 100%;
     border: 0;
     border-radius: 15px;
     background-color: #fefaf9;
@@ -88,17 +83,15 @@ body {
 }
 /* media */
 @media screen and (max-width: 768px) {
-    .container {
-        width: 90%;
-        height: auto;
-    }
     .box {
         height: auto;
         flex-direction: column-reverse;
-        padding-top: 60PX;
-        padding-bottom: 60PX ;
     }
     .box .left {
+        width: 100%;
+    }
+    .box .right {
+        flex-direction: column;
         width: 100%;
     }
     .box .right .image {
@@ -115,7 +108,7 @@ body {
         display: block;
         padding-bottom: 20px;
         background-size: 100% auto;
-        
+        margin-top: 20px;
     }
     .box .left h1 {
         text-align: center;
@@ -123,5 +116,8 @@ body {
     .box .left p {
         text-align: center;
         margin-bottom: 58px;
+    }
+    .box .left .email-box {
+        margin: auto;
     }
 }
